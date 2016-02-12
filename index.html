@@ -11,8 +11,6 @@
     <div class="mixpanel-platform-section">
       <div id="selection">
         <div id="eventName" style="float: left;"></div>
-        <div id="by" class="mixpanel-platform-label" style="margin-left: 10px; display: none;">by</div>
-        <div id="eventProp" style="float: left;"></div>
         <div style="clear: both;"></div>
         <div id="dividendInterval" style="float: left;"></div>
         <div id="over" class="mixpanel-platform-label" style="margin-left: 10px; display: none;">over</div>
@@ -48,7 +46,6 @@
         $('#over').show();
         // replace with event name of your choice
         var eventName = $('#eventName').MPEventSelect();
-        var segmentation = $('#eventProp').MPPropertySelect();
         // Setting our intervals
         var divisorOptions = {
           items: [
@@ -125,11 +122,9 @@
 
         eventName.on('change', function(e, Name){
           $('#by').show();
-          segmentation.MPPropertySelect('setEvent', Name);
           runQuery()
         });
 
-        segmentation.on('change', propCheck);
         divisorInterval.on('change', propCheck);
         dividendInterval.on('change', propCheck);
       });
