@@ -86,7 +86,6 @@
           });
           // Wait till the segmentation queries finish
           $.when($dividend, $divisor).done(function(dividend, divisor) {
-            debugger
             var data = {};
             // Set our divisor dates and report them backgrounds
             var properties = _.keys(divisor.values())
