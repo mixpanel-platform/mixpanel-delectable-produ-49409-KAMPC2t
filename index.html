@@ -113,6 +113,7 @@
               data[prop] = {}
               _.each(divisorDates, function(divisorDate) {
                 _.each(_.keys(divData[prop]), function(divDate){
+                  debugger
                   if (divDate <= divisorDate) {
                     denominator =  divisor.values()[prop][divisorDate];
                     numerator = dividend.values()[prop][divDate];
