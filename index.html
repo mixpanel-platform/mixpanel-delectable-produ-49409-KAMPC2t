@@ -125,8 +125,8 @@
           runQuery()
         });
 
-        divisorInterval.on('change', propCheck);
-        dividendInterval.on('change', propCheck);
+        divisorInterval.on('change', runQuery);
+        dividendInterval.on('change', runQuery);
       });
     </script>
   </body>
